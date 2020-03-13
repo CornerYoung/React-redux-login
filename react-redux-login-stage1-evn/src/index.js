@@ -10,12 +10,14 @@ import rootReducer from './reducers'
 
 import routes from './routes'
 import {BrowserRouter as Router} from 'react-router-dom'
+import NavigationBar from './components/NavigationBar'
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(logger, thunk)))
 
 ReactDOM.render(
     <Provider store={store}>
         <Router routes={routes}>
+            <NavigationBar/>
             {routes}
         </Router>
     </Provider>
