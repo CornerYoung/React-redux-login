@@ -19,7 +19,7 @@ export default class SignupForm extends Component {
 
     onSubmit = (e)=>{
         e.preventDefault()
-        console.log(this.state)
+        this.props.signupActions.userSignupRequest(this.state)
     }
 
     render() {
