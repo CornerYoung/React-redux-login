@@ -8,7 +8,7 @@ const validatorInput = (data)=>{
     if(validator.isEmpty(data.username)){
         errors.username = '请输入用户名'
     }
-    if(validator.isEmail(data.email)){
+    if(validator.isEmpty(data.email)) {
         errors.email = '请填写邮箱'
     }
     if(validator.isEmpty(data.password)){
