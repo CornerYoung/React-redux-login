@@ -22,6 +22,7 @@ export default class SignupForm extends Component {
 
     onSubmit = (e)=>{
         e.preventDefault()
+        this.setState({errors:{},isLoading:true})
         this.props.signupActions.userSignupRequest(this.state).then(
             ()=>{},
             ({ response }) => {
