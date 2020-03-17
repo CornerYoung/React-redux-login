@@ -24,7 +24,9 @@ export default class SignupForm extends Component {
         e.preventDefault()
         this.setState({errors:{},isLoading:true})
         this.props.signupActions.userSignupRequest(this.state).then(
-            ()=>{},
+            ()=>{
+                this.props.history.push('/')
+            },
             ({ response }) => {
                 this.setState({ errors: response.data, isLoading: false})
             }

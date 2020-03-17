@@ -10,7 +10,7 @@ class SingupPage extends Component {
             <div className="row">
                 <div className="col-md-3"></div>
                 <div className="col-md-6">
-                    <SignupForm signupActions={this.props.signupActions}/>
+                    <SignupForm history={this.props.history} signupActions={this.props.signupActions}/>
                 </div>
                 <div className="col-md-3"></div>
             </div>
