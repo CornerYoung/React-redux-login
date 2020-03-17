@@ -29,7 +29,11 @@ const validatorInput = (data)=>{
 router.post('/', (req, res) => {
     console.log(req.body)
     const {errors,isValid} = validatorInput(req.body)
-    if(!isValid){
+    if(isValid){
+        res.send({
+            success: true
+        })
+    }else{
         res.status(400).json(errors)
     }
 })
